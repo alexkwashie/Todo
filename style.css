@@ -8,8 +8,7 @@ body{
 }
 
 .todos span{
-    color: black;
-
+    font-weight: 500;
 }
 
 input[type="text"],
@@ -17,10 +16,7 @@ input[type="text"]:focus{
     border: none;
 }
 .todos li{
-    background: rgb(218, 241, 172);
-}
-i{
-    color: black;
+    background: rgb(38, 100, 194);
 }
 
 i:hover{
