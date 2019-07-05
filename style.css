@@ -1,0 +1,28 @@
+
+body{
+    background: rgb(113, 166, 213);
+}
+
+.container{
+    max-width: 500px;
+}
+
+.todos span{
+    color: black;
+
+}
+
+input[type="text"],
+input[type="text"]:focus{
+    border: none;
+}
+.todos li{
+    background: rgb(218, 241, 172);
+}
+i{
+    color: black;
+}
+
+i:hover{
+    cursor: pointer;
+}
