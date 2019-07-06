@@ -1,6 +1,6 @@
 
 body{
-    background: rgb(113, 166, 213);
+    background: rgb(71, 160, 238);
 }
 
 .container{
@@ -21,4 +21,8 @@ input[type="text"]:focus{
 
 i:hover{
     cursor: pointer;
+}
+
+.remove{
+    display: none;
 }

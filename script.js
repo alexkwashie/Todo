@@ -39,6 +39,26 @@ addTask.addEventListener('submit', e =>{
     })
 
 
+    const filterTodos = (i) =>{
+        Array.from(todos.children) //Convert list of Todos to an array
+
+        .filter((todo)=>{ //filter thought them
+            return !todo.textContent.includes(i)
+            .forEach(todo => {
+                todo.classList.add('remove');
+            });
+        })
+    }
 
 
 //STAGE4 Adding Search Functionality
+const searchFiled = document.querySelector('.search input');
+
+searchFiled.addEventListener('keyup', e =>{
+    let val1 = searchFiled.value.trim();
+
+    filterTodos(val1);
+
+    });
+
+   //if(val1 == )
