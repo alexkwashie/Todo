@@ -9,7 +9,7 @@ const todos = document.querySelector('.todos');
 addTask.addEventListener('submit', e =>{
     e.preventDefault();
 
-    let val = addTask.add.value.trim(); //input value
+    let val = addTask.add.value.trim().toLowerCase(); //input value
     //use .trim() to remove white spaces
 
     if (val != ""){
@@ -40,22 +40,24 @@ addTask.addEventListener('submit', e =>{
 
 
     const filterTodos = (i) =>{
-        Array.from(todos.children) //Convert list of Todos to an array
 
-        .filter((todo)=>{ //filter thought them
-            return !todo.textContent.includes(i)
-            .forEach(todo => {
-                todo.classList.add('remove');
-            });
-        })
-    }
+        Array.from(todos.children) //Convert list of Todos to an array
+        .filter((todo) => !todo.textContent.toLowerCase().includes(i))
+        .forEach(todo => todo.classList.add('remove'));
+
+        //opposit of top i.e so if current input content matches remove class
+        Array.from(todos.children)
+        .filter((todo) => todo.textContent.includes(i))
+        .forEach(todo => todo.classList.remove('remove'));
+        
+    };
 
 
 //STAGE4 Adding Search Functionality
 const searchFiled = document.querySelector('.search input');
 
 searchFiled.addEventListener('keyup', e =>{
-    let val1 = searchFiled.value.trim();
+    let val1 = searchFiled.value.trim().toLowerCase();
 
     filterTodos(val1);
 
